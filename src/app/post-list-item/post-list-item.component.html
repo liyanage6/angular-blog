@@ -1,0 +1,11 @@
+<li [ngClass]="{  'list-group-item':true,
+                  'list-group-item-success':postLoveit>0,
+                  'list-group-item-danger':postLoveit<0}">
+
+  <h4 class="col-sm-8" style="display:inline">{{ postTitle }}</h4>
+  <p class="col-sm-2" style="display:inline; float:right">{{postCreated_at | date : "d/MM/y"}}</p>
+  <p>{{ postContent }}</p>
+  <button (click)="setLike()" type="button" class="btn btn-success" style="margin:2px 2px">LoveIts</button>
+  <button (click)="setDislike()" type="button" class="btn btn-danger">DontLoveIt</button>
+  <p>{{postLoveit}}</p>
+</li>
